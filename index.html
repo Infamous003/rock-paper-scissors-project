@@ -4,40 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-      body{
-        font-family: Arial, Helvetica, sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
 
-    <div>
-      <p class="player"></p>
-      <p class="computer"></p>
+    <div class="main-container">
+      <div class="upper-div">
+        <h1>Rock Paper Scissors</h1>
+        <h3>Do not be a noob :p</h3>
+        <p class="js-result result"></p>
+      </div>
+
+      <div class="mid-div">
+        <div class="player-div">
+          <div class="show-move">
+            <p class="player"></p>
+          </div>
+          <h2>You</h2>
+        </div>
+        <h1 class="vs">VS</h1>
+        <div class="player-div">
+          <div class="show-move">
+            <p class="computer"></p>
+          </div>
+          <h2>Computer</h2>
+        </div>
+
+      </div>
+      <div style="text-align: center;font-size: 1.2rem;">What's your move?</div>
+      <div class="bottom-div">
+        <button class="js-rock" onclick="
+        // playGame('rock');
+        playGame(getPlayerMove('✊'), getComputerMove());
+        ">
+          ✊
+        </button>
+        <button class="js-paper" onclick="
+        //playGame('paper');
+        playGame(getPlayerMove('🖐️'), getComputerMove());
+        ">
+          🖐️
+        </button>
+        <button class="js-scissors" onclick="
+        //playGame('scissors');
+        playGame(getPlayerMove('✌️'), getComputerMove());
+        ">
+          ✌️
+        </button>
+      </div>
+      <script src="script.js"></script>
+
     </div>
-
-    <button class="js-rock" onclick="
-    // playGame('rock');
-    playGame(getPlayerMove('rock'), getComputerMove());
-    ">
-      Rock
-    </button>
-    <button class="js-paper" onclick="
-    //playGame('paper');
-    playGame(getPlayerMove('paper'), getComputerMove());
-    ">
-      Paper
-    </button>
-    <button class="js-scissors" onclick="
-    //playGame('scissors');
-    playGame(getPlayerMove('scissors'), getComputerMove());
-    ">
-      Scissors
-    </button>
-
-    <p class="js-result"></p>
-
-    <script src="script.js"></script>
   </body>
 </html>

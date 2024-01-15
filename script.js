@@ -10,11 +10,11 @@ function getComputerMove() {
 
   //console.log(computerChoice);
   if(computerChoice > 0 && computerChoice <= 0.3) {
-    return 'rock';
+    return '✊';
   }else if (computerChoice > 0.3 && computerChoice <= 0.6) {
-    return 'paper';
+    return '🖐️';
   }else if(computerChoice > 0.6 && computerChoice <= 1) {
-    return 'scissors';
+    return '✌️';
   }
 }
 
@@ -24,8 +24,8 @@ function showMove(playerMove, computerMove) {
   let showPlayerMoveEle = document.querySelector('.player');
   let showComputerMoveEle = document.querySelector('.computer');
 
-  showPlayerMoveEle.innerText = 'You: ' + playerMove;
-  showComputerMoveEle.innerText = 'Computer: ' + computerMove;
+  showPlayerMoveEle.innerText = playerMove;
+  showComputerMoveEle.innerText = computerMove;
 }
 
 
@@ -38,20 +38,20 @@ function playGame(playerMove, computerMove) {
   if(playerMove === computerMove) {
     resultElement.innerHTML = 'Draw';
   }else{
-    if(playerMove === 'rock') {
-      if(computerMove === 'paper'){
+    if(playerMove === '✊') {
+      if(computerMove === '🖐️'){
         resultElement.innerText = 'You lose';
       }else {
         resultElement.innerText = 'You win';
       }
-    }else if(playerMove === 'paper'){
-      if(computerMove === 'rock'){
+    }else if(playerMove === '🖐️'){
+      if(computerMove === '✊'){
         resultElement.innerText = 'You win';
       }else{
         resultElement.innerText = 'You lose';
       }
-    }else if(playerMove === 'scissors') {
-      if(computerMove === 'rock'){
+    }else if(playerMove === '✌️') {
+      if(computerMove === '✊'){
         resultElement.innerText = 'You lose';
       }else {
         resultElement.innerText = 'You win';
