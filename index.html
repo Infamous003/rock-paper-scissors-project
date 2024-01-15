@@ -18,17 +18,20 @@
     </div>
 
     <button class="js-rock" onclick="
-    playGame('rock');
+    // playGame('rock');
+    playGame(getPlayerMove('rock'), getComputerMove());
     ">
       Rock
     </button>
     <button class="js-paper" onclick="
-    playGame('paper');
+    //playGame('paper');
+    playGame(getPlayerMove('paper'), getComputerMove());
     ">
       Paper
     </button>
     <button class="js-scissors" onclick="
-    playGame('scissors');
+    //playGame('scissors');
+    playGame(getPlayerMove('scissors'), getComputerMove());
     ">
       Scissors
     </button>
