@@ -109,3 +109,17 @@ button:active {
   justify-content: space-between;
   padding-top: 20px;
 }
+
+/*              Score division               */
+
+.score-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 10px;
+  justify-content: space-around;
+}
+
+.score {
+  font-size: 1.2rem;
+}

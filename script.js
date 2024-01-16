@@ -1,3 +1,21 @@
+let score = {
+  wins: 0,
+  loses: 0, 
+  ties: 0
+};
+
+function showScore() {
+  let winsElement = document.querySelector('.wins-digit');
+  winsElement.innerText = `${score.wins}`;
+
+  let losesElement = document.querySelector('.loses-digit');
+  losesElement.innerText = `${score.loses}`;
+
+  let drawsElement = document.querySelector('.draws-digit');
+  drawsElement.innerText = `${score.ties}`;
+
+}
+
 //     This function returns the player move     //
 function getPlayerMove(playerMove) {
   return playerMove;
@@ -37,27 +55,35 @@ function playGame(playerMove, computerMove) {
   
   if(playerMove === computerMove) {
     resultElement.innerHTML = 'Draw';
+    score.ties++;
   }else{
     if(playerMove === '✊') {
       if(computerMove === '🖐️'){
         resultElement.innerText = 'You lose';
+        score.loses++;
       }else {
         resultElement.innerText = 'You win';
+        score.wins++;
       }
     }else if(playerMove === '🖐️'){
       if(computerMove === '✊'){
         resultElement.innerText = 'You win';
+        score.wins++;
       }else{
         resultElement.innerText = 'You lose';
+        score.loses++;
       }
     }else if(playerMove === '✌️') {
       if(computerMove === '✊'){
         resultElement.innerText = 'You lose';
+        score.loses++;
       }else {
         resultElement.innerText = 'You win';
+        score.wins++;
       }
     }
   }
+  showScore();
 }
 
 /*                      My first approach to do solve this project                                                */
